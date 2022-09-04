@@ -5,3 +5,6 @@
 ## Libraries
 ### Text
 - [Templating](Libraries/Text/Templating.md)
+
+### Time
+- [Timing](Libraries/Time/Timing.md)
