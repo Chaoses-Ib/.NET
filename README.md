@@ -5,6 +5,7 @@
   - [Garbage Collection](Languages/C#/Garbage%20Collection.md)
   - [Pointers](Languages/C#/Pointers.md)
   - [Arrays](Languages/C#/Arrays.md)
+  - [Methods](Languages/C#/Methods.md)
   - [Iterators](Languages/C#/Iterators.md)
 
 ## Build
