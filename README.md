@@ -3,6 +3,8 @@
 - [Executable Size](Build/Executable%20Size.md)
 
 ## Libraries
+- Collections
+  - [IEnumerable](Libraries/Collections/IEnumerable.md)
 - Text
   - [Templating](Libraries/Text/Templating.md)
 - Time
