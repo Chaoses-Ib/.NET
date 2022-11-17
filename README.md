@@ -1,6 +1,10 @@
 # .NET
 ## Languages
 - C#
+  - [Stack](Languages/C#/Stack.md)
+  - [Garbage Collection](Languages/C#/Garbage%20Collection.md)
+  - [Pointers](Languages/C#/Pointers.md)
+  - [Arrays](Languages/C#/Arrays.md)
   - [Iterators](Languages/C#/Iterators.md)
 
 ## Build
@@ -9,6 +13,7 @@
 ## Libraries
 - Collections
   - [IEnumerable](Libraries/Collections/IEnumerable.md)
+- [Memory](Libraries/Memory/README.md)
 - Text
   - [Templating](Libraries/Text/Templating.md)
 - Time
