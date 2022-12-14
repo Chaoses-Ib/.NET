@@ -1,6 +1,7 @@
 # .NET
 ## Common Language Infrastructure
 - [Resources](CLI/Resources.md)
+- [Compatibility](CLI/Compatibility.md)
 
 ## [Languages](Languages/README.md)
 - C#
