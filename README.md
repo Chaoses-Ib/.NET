@@ -1,4 +1,7 @@
 # .NET
+## Common Language Infrastructure
+- [Resources](CLI/Resources.md)
+
 ## [Languages](Languages/README.md)
 - C#
   - [Stack](Languages/C%23/Stack.md)
