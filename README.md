@@ -2,6 +2,7 @@
 ## Common Language Infrastructure
 - [Resources](CLI/Resources.md)
 - [Compatibility](CLI/Compatibility.md)
+- [Security](CLI/Security.md)
 
 ## [Languages](Languages/README.md)
 - C#
@@ -30,4 +31,10 @@
   - [Timing](Libraries/Time/Timing.md)
 - [Serialization](Libraries/Serialization/README.md)
   - [Binary Serialization](Libraries/Serialization/Binary%20Serialization.md)
+- [Inversion of Control](Libraries/IoC/README.md)
+  - [Plugin Frameworks](Libraries/IoC/Plugin%20Frameworks/README.md)
+    - [Managed Extensibility Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Extensibility%20Framework.md)
+    - [Managed Add-in Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Add-in%20Framework.md)
+- Communication
+  - [Windows Communication Foundation](Libraries/Communication/WCF/README.md)
 - [Unit Testing](Libraries/Unit%20Testing/README.md)
