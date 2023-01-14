@@ -38,3 +38,9 @@
 - Communication
   - [Windows Communication Foundation](Libraries/Communication/WCF/README.md)
 - [Unit Testing](Libraries/Unit%20Testing/README.md)
+
+### GUI
+- [Windows Presentation Foundation](Libraries/GUI/WPF/README.md)
+  - [Dependency Properties](Libraries/GUI/WPF/Dependency%20Properties.md)
+  - [Data Binding](Libraries/GUI/WPF/Data%20Binding.md)
+  - [Data Templates](Libraries/GUI/WPF/Data%20Templates.md)
