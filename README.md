@@ -44,3 +44,5 @@
   - [Dependency Properties](Libraries/GUI/WPF/Dependency%20Properties.md)
   - [Data Binding](Libraries/GUI/WPF/Data%20Binding.md)
   - [Data Templates](Libraries/GUI/WPF/Data%20Templates.md)
+  - Controls
+    - [TreeView](Libraries/GUI/WPF/Controls/TreeView.md)
