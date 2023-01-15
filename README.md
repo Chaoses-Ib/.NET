@@ -11,6 +11,7 @@
   - [Pointers](Languages/C%23/Pointers.md)
   - [Arrays](Languages/C%23/Arrays.md)
   - [Tuple Types](Languages/C%23/Tuple%20Types.md)
+  - [Interfaces](Languages/C%23/Interfaces.md)
   - [Methods](Languages/C%23/Methods.md)
   - [Iterators](Languages/C%23/Iterators.md)
 - F#
