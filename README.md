@@ -28,6 +28,7 @@
 - [Memory](Libraries/Memory/README.md)
 - Text
   - [Templating](Libraries/Text/Templating.md)
+  - [JSON](Libraries/Text/JSON.md)
 - Time
   - [Timing](Libraries/Time/Timing.md)
 - [Serialization](Libraries/Serialization/README.md)
