@@ -1,7 +1,8 @@
 # .NET
-## Common Language Infrastructure
+## [Common Language Infrastructure](CLI/README.md)
 - [Resources](CLI/Resources.md)
 - [Compatibility](CLI/Compatibility.md)
+- [Application Domains](CLI/Application%20Domains.md)
 - [Security](CLI/Security.md)
 
 ## [Languages](Languages/README.md)

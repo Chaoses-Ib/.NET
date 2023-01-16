@@ -24,6 +24,9 @@ Sandboxes:
 - Isolated AppDomain
 
   由于 .NET Framework 的主 AppDomain 不允许卸载 assembly，只能销毁整个 AppDomain[^appdomain-unload]，如果要实现插件的动态卸载，也需要将插件加载到独立的 AppDomain 中。
+
+  [mef - Looking for a practical approach to sandboxing .NET plugins - Stack Overflow](https://stackoverflow.com/questions/4145713/looking-for-a-practical-approach-to-sandboxing-net-plugins)
+
 - Managed Add-in Framework
 
 ## MEF vs MAF
