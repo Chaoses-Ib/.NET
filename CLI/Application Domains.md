@@ -3,6 +3,8 @@
 
 An **application domain** is a logical container for a set of assemblies. Application domains allow third-party untrusted code to run in an existing process, and the CLR guarantees that the data structures, code, and security context will not be exploited or compromised.
 
+The CLR doesn’t support the ability to unload a single assembly from an AppDomain. However, you can tell the CLR to unload an AppDomain, which will cause all of the assemblies currently contained in it to be unloaded as well.
+
 ```csharp
 // Get a reference to the AppDomain that the calling thread is executing in 
 // Or System.AppDomain.CurrentDomain

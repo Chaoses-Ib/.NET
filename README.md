@@ -1,9 +1,11 @@
 # .NET
 ## [Common Language Infrastructure](CLI/README.md)
+- Assemblies
+  - [Loading](CLI/Assemblies/Loading.md)
 - [Resources](CLI/Resources.md)
-- [Compatibility](CLI/Compatibility.md)
 - [Application Domains](CLI/Application%20Domains.md)
 - [Security](CLI/Security.md)
+- [Compatibility](CLI/Compatibility.md)
 
 ## [Languages](Languages/README.md)
 - C#
