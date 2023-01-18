@@ -104,4 +104,35 @@ or:
           HorizontalContentAlignment="Stretch">
 ```
 
+## Context menu
+在 TreeView 中，右键单击项目不会导致相应项目被选中，这意味着如果为不同的项目设置了不同的 ContextMenu，那么 TreeView.SelectedItem 获取到的将会是错误的项目。这个问题可以通过两种方法解决：
+
+- 在右键单击时选中相应项目
+
+  ```csharp
+  private void OnPreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+  {
+      TreeViewItem treeViewItem = VisualUpwardSearch(e.OriginalSource as DependencyObject);
+  
+      if (treeViewItem != null)
+      {
+          treeViewItem.Focus();
+          e.Handled = true;
+      }
+  }
+  
+  static TreeViewItem VisualUpwardSearch(DependencyObject source)
+  {
+      while (source != null && !(source is TreeViewItem))
+          source = VisualTreeHelper.GetParent(source);
+  
+      return source as TreeViewItem;
+  }
+  ```
+  
+  [wpf - Select TreeView Node on right click before displaying ContextMenu - Stack Overflow](https://stackoverflow.com/questions/592373/select-treeview-node-on-right-click-before-displaying-contextmenu)
+
+- 根据 SelectedItem 决定要显示的 ContextMenu
+
+
 [^prowpf]: Pro WPF 4.5 in C#
