@@ -45,6 +45,7 @@
 - [Logging](Libraries/Logging.md)
 - Communication
   - [Windows Communication Foundation](Libraries/Communication/WCF/README.md)
+- [CLI](Libraries/CLI/README.md)
 - [Unit Testing](Libraries/Unit%20Testing/README.md)
 
 ### GUI
