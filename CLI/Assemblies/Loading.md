@@ -7,6 +7,8 @@ Within an application domain, assemblies can be loaded into one of three context
 - The **reflection-only context** contains assemblies loaded with the [ReflectionOnlyLoad](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.reflectiononlyload) and [ReflectionOnlyLoadFrom](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.reflectiononlyloadfrom) methods. Code in this context cannot be executed.
 - If you generated a transient dynamic assembly by using reflection emit, the assembly is not in any context. In addition, most assemblies that are loaded by using the [LoadFile](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.loadfile) method are loaded without context, and assemblies that are loaded from byte arrays are loaded without context unless their identity (after policy is applied) establishes that they are in the global assembly cache.
 
+由于不同 load context 中的类型是不兼容的，即使是同一 assembly 中的同一类型，被加载到不同 load context 后也无法相互替换。对于经过 MarshalByRefObject 等透明代理后的类型来说也是一样。
+
 See [Best Practices for Assembly Loading - .NET Framework | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading) and [Understanding The CLR Binder | Microsoft Learn](https://learn.microsoft.com/en-us/archive/msdn-magazine/2009/may/understanding-the-clr-binder#id0400031) for details.
 
 ## Default load context
@@ -20,9 +22,58 @@ Internally, the CLR attempts to load this assembly by using the `System.Reflecti
 
 If you call Load by passing a weakly named assembly, Load doesn’t apply a version-binding redirection policy to the assembly, and the CLR won’t look in the GAC for the assembly.[^clrvia] See [How the Runtime Locates Assemblies - .NET Framework | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/framework/deployment/how-the-runtime-locates-assemblies) for details.
 
-Load 似乎只会检查 default load context 中的 assemblies，不会使用其它 context 中加载的 assemblies。这意味着 [AppDomain.CreateInstance()](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.createinstance) 将无法创建其它 context 中的 assemblies 的类，而只能通过 [Assembly.CreateInstance()](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.createinstance) 创建。
+Load 只会检查 default load context 中的 assemblies，不会使用其它 context 中加载的 assemblies。这意味着：
+- [AppDomain.CreateInstance()](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.createinstance) 将无法创建其它 context 中的类型，而只能通过 [Assembly.CreateInstance()](https://learn.microsoft.com/en-us/dotnet/api/system.reflection.assembly.createinstance) 创建。
+- 使用 marshal-by-value 进行跨 AppDomain 通讯时无法创建其它 context 中的类型，只能通过将类型加载到 default load context 来解决。
 
-.NET provides the [AppDomain.AssemblyResolve](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.assemblyresolve) event for applications that require greater control over assembly loading. By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on. See [Resolve assembly loads | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/assembly/resolve-loads) for details.
+.NET provides the [AppDomain.AssemblyResolve](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.assemblyresolve) event for applications that require greater control over assembly loading. By handling this event, your application can load an assembly into the load context from outside the normal probing paths, select which of several assembly versions to load, emit a dynamic assembly and return it, and so on. AssemblyResolve 调用的 delegate 必须位于 AppDomain 内。 See [Resolve assembly loads | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/standard/assembly/resolve-loads) for details.
+
+创建 AppDomain 并加载指定位置的 assembly 到 default load context 中：
+```csharp
+AppDomainSetup setup = new AppDomainSetup
+{
+    ApplicationBase = directory
+};
+AppDomain domain = AppDomain.CreateDomain("friendlyName", null, setup);
+
+// ...\A.dll:AssemblyResolver
+domain.CreateInstanceFromAndUnwrap(typeof(AssemblyResolver).Assembly.Location, typeof(AssemblyResolver).FullName);
+
+// directory\B.dll:Class1
+domain.CreateInstanceAndUnwrap(typeof(Class1).Assembly.FullName, typeof(Class1).FullName);
+
+/// <summary>
+/// In new application domain and load-from load context.
+/// </summary>
+[Serializable]
+public class AssemblyResolver
+{
+    public AssemblyResolver()
+    {
+        AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
+        {
+            int commaPosition = args.Name.IndexOf(',');
+            string name = commaPosition == -1 ? args.Name : args.Name.Substring(0, commaPosition);
+            if (!name.EndsWith(".dll"))
+                name += ".dll";
+
+            try
+            {
+                return Assembly.LoadFrom(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, name));
+            }
+            catch { }
+
+            try
+            {
+                return Assembly.LoadFrom(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), name));
+            }
+            catch { }
+
+            return null;
+        };
+    }
+}
+```
 
 ## No context
 Loading assemblies without context has the following disadvantages:

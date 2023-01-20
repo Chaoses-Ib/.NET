@@ -1,6 +1,8 @@
 # Interfaces
 ## Duck typing
 - [Dynamic type](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/using-type-dynamic)
+
+  具有侵入性，要求用户也使用 `dynamic` 类型。
 - [ImpromptuInterface](https://github.com/ekonbenefits/impromptu-interface)
 - [Duck Typing Library](https://github.com/meyertime/DuckTyping)
 

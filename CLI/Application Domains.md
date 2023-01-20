@@ -5,6 +5,9 @@ An **application domain** is a logical container for a set of assemblies. Applic
 
 The CLR doesn’t support the ability to unload a single assembly from an AppDomain. However, you can tell the CLR to unload an AppDomain, which will cause all of the assemblies currently contained in it to be unloaded as well.
 
+可以调用 [AppDomain.DoCallBack(CrossAppDomainDelegate)](https://learn.microsoft.com/en-us/dotnet/api/system.appdomain.docallback?view=netframework-4.8.1) 来在指定 AppDomain 中执行代码，但不支持 lambda，只支持方法，写起来会很繁琐。
+
+## Cross-AppDomain communication
 ```csharp
 // Get a reference to the AppDomain that the calling thread is executing in 
 // Or System.AppDomain.CurrentDomain
@@ -27,7 +30,7 @@ Default AppDomain's friendly name= Ch22­1­AppDomains.exe
 Main assembly=Ch22­1­AppDomains, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null 
 ```
 
-## Cross­-AppDomain communication using marshal-­by­-reference
+### Cross­-AppDomain communication using marshal-­by­-reference
 ```csharp
 // Create new AppDomain (security and configuration match current AppDomain) 
 ad2 = AppDomain.CreateDomain("AD #2", null, null); 
@@ -89,9 +92,19 @@ Obviously, accessing objects across AppDomain boundaries by using marshal-by-ref
 
 Static members of a type derived from `MarshalByRefObject` are always accessed in the context of the calling AppDomain. Having a type’s static members execute in one AppDomain while instance members execute in another AppDomain would make a very awkward programming model.
 
-The CLR uses a **lease manager**. When a proxy for an object is created, the CLR keeps the object alive for five minutes. If no calls have been made through the proxy after five minutes, then the object is deactivated and will have its memory freed at the next garbage collection. After each call into the object, the lease manager renews the object’s lease so that it is guaranteed to remain in memory for another two minutes before being deactivated. It is possible to override the default lease times of five minutes and two minutes by overriding `MarshalByRefObject`’s virtual [InitializeLifetimeService](https://learn.microsoft.com/en-us/dotnet/api/system.marshalbyrefobject.initializelifetimeservice?view=netframework-4.8) method.
+The CLR uses a **lease manager**. When a proxy for an object is created, the CLR keeps the object alive for five minutes. If no calls have been made through the proxy after five minutes, then the object is deactivated and will have its memory freed at the next garbage collection. After each call into the object, the lease manager renews the object’s lease so that it is guaranteed to remain in memory for another two minutes before being deactivated.
 
-## Cross­-AppDomain communication using marsha-­by-­value
+It is possible to override the default lease times of five minutes and two minutes by overriding `MarshalByRefObject`’s virtual [InitializeLifetimeService](https://learn.microsoft.com/en-us/dotnet/api/system.marshalbyrefobject.initializelifetimeservice?view=netframework-4.8) method. Returning null will make the object has infinite lifetime[^lease-so]:
+```csharp
+[SecurityPermissionAttribute(SecurityAction.Demand, Flags = SecurityPermissionFlag.Infrastructure)]
+public override object InitializeLifetimeService()
+{
+  return null;
+}
+```
+See [Managing an Object's Lifetime](http://www.diranieh.com/NETRemoting/InDepthRemoting.htm) for details.
+
+### Cross­-AppDomain communication using marshal-­by-­value
 ```csharp
 // Create new AppDomain (security and configuration match current AppDomain) 
 ad2 = AppDomain.CreateDomain("AD #2", null, null); 
@@ -167,7 +180,7 @@ Successful call.
 
 When a source AppDomain wants to send or return a reference to an object to a destination AppDomain, the CLR serializes the object’s instance fields into a byte array. This byte array is copied from the source AppDomain to the destination AppDomain. Then, the CLR deserializes the byte array in the destination AppDomain. This forces the CLR to load the assembly that defines the type being deserialized into the destination AppDomain if it is not already loaded. Then, the CLR creates an instance of the type and uses the values in the byte array to initialize the object’s fields so that they have values identical to those they had in the original object.
 
-## Cross­-AppDomain communication using non-marshalable types
+### Cross­-AppDomain communication using non-marshalable types
 ```csharp
 // Create new AppDomain (security and configuration match current AppDomain) 
 ad2 = AppDomain.CreateDomain("AD #2", null, null); 
@@ -218,5 +231,25 @@ at Program.Marshalling()
 at Program.Main()  
 ```
 
+对于不便于继承 MarshalByRefObject 的不可 marshal 类型，可以将其包装在一个 MarshalByRefObject 内进行传递，只通过可 marshal 类型进行传参和返回。这种包装对象也被称作 [mediator](https://en.wikipedia.org/wiki/Mediator_pattern)[^mediator-so]。可以使用 [MarshalByRefProxy](https://github.com/Chaoses-Ib/MarshalByRefProxy) 来自动完成这种包装。
+
+一些不可 marshal 类型：
+- `Task`, `Task<TResult>`
+
+  这意味着无法使用 await。
+- lambda
+
+  只能使用继承了 MarshalByRefObject 的函数类。
+
+## Libraries
+- [MarshalByRefProxy: A .NET library for marshalling any object by reference that do not require the object to inherit from MarshalByRefObject.](https://github.com/Chaoses-Ib/MarshalByRefProxy)
+- [JointCode.Shuttle: A fast, flexible and easy-to-use service-oriented framework for cross-AppDomain communication.](https://github.com/jingyiliu/JointCode.Shuttle)
+- [DynamicScriptSandbox: An experiment with C# .NET, dynamic compilation, and AppDomains](https://github.com/fadden/DynamicScriptSandbox)
+
+## .NET Core
+- [AppDomainAlternative: A .Net Core AppDomain isolation alternative.](https://github.com/CyAScott/AppDomainAlternative)
+
 
 [^clrvia]: CLR via C#
+[^lease-so]: [c# - AppDomain and MarshalByRefObject life time : how to avoid RemotingException? - Stack Overflow](https://stackoverflow.com/questions/2410221/appdomain-and-marshalbyrefobject-life-time-how-to-avoid-remotingexception)
+[^mediator-so]: [c# - Communication between AppDomains - Stack Overflow](https://stackoverflow.com/questions/8972352/communication-between-appdomains)
