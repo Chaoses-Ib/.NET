@@ -8,6 +8,7 @@
 - [.NET Remoting](CLI/.NET%20Remoting.md)
 - [Security](CLI/Security.md)
 - [Compatibility](CLI/Compatibility.md)
+- [.NET Framework](CLI/.NET%20Framework.md)
 
 ## [Languages](Languages/README.md)
 - C#
@@ -26,6 +27,7 @@
 - PowerShell
 
 ## Build
+- [Framework Targeting](Build/Framework%20Targeting.md)
 - [Executable Size](Build/Executable%20Size.md)
 
 ## Libraries
