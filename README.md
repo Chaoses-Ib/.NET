@@ -21,6 +21,7 @@
   - [Interfaces](Languages/C%23/Interfaces.md)
   - [Methods](Languages/C%23/Methods.md)
   - [Iterators](Languages/C%23/Iterators.md)
+  - [Asynchronous Programming](Languages/C%23/Asynchronous%20Programming.md)
 - F#
 - VB.NET
 - C++/CLI
