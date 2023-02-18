@@ -25,7 +25,12 @@
 - F#
 - VB.NET
 - C++/CLI
-- PowerShell
+- [PowerShell](Languages/PowerShell/README.md)
+  - [Providers](Languages/PowerShell/Providers.md)
+  - [Flow Control](Languages/PowerShell/Flow%20Control.md)
+  - [Functions](Languages/PowerShell/Functions.md)
+  - [Modules](Languages/PowerShell/Modules.md)
+  - [Security](Languages/PowerShell/Security.md)
 
 ## Build
 - [Project SDKs](Build/Project%20SDKs.md)
