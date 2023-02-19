@@ -26,6 +26,7 @@
 - VB.NET
 - C++/CLI
 - [PowerShell](Languages/PowerShell/README.md)
+  - [Strings](Languages/PowerShell/Strings.md)
   - [Providers](Languages/PowerShell/Providers.md)
   - [Flow Control](Languages/PowerShell/Flow%20Control.md)
   - [Functions](Languages/PowerShell/Functions.md)
