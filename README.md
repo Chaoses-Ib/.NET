@@ -1,11 +1,14 @@
 # .NET
-## [Common Language Infrastructure](CLI/README.md)
+## [Common Language Infrastructure](计算机.软件开发＼.NET＼public/CLI/README.md)
 - Assemblies
   - [Loading](CLI/Assemblies/Loading.md)
   - [Strong-named Assemblies](CLI/Assemblies/Strong-named%20Assemblies.md)
 - [Resources](CLI/Resources.md)
 - [Application Domains](CLI/Application%20Domains.md)
 - [.NET Remoting](CLI/.NET%20Remoting.md)
+- Interoperability
+  - [Platform Invoke](CLI/Interoperability/Platform%20Invoke.md)
+  - [Type Marshalling](CLI/Interoperability/Type%20Marshalling.md)
 - [Security](CLI/Security.md)
 - [Compatibility](CLI/Compatibility.md)
 - [.NET Framework](CLI/.NET%20Framework.md)
@@ -24,7 +27,7 @@
   - [Asynchronous Programming](Languages/C%23/Asynchronous%20Programming.md)
 - F#
 - VB.NET
-- C++/CLI
+- [C++/CLI](Languages/C++CLI/README.md)
 - [PowerShell](Languages/PowerShell/README.md)
   - [Strings](Languages/PowerShell/Strings.md)
   - [Providers](Languages/PowerShell/Providers.md)
