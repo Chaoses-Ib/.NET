@@ -1,5 +1,5 @@
-# .NET
-## [Common Language Infrastructure](计算机.软件开发＼.NET＼public/CLI/README.md)
+# [.NET](.NET.md)
+## [Common Language Infrastructure](CLI/README.md)
 - Assemblies
   - [Loading](CLI/Assemblies/Loading.md)
   - [Strong-named Assemblies](CLI/Assemblies/Strong-named%20Assemblies.md)
@@ -62,7 +62,8 @@
 - [CLI](Libraries/CLI/README.md)
 - [Unit Testing](Libraries/Unit%20Testing/README.md)
 
-### GUI
+### [GUI](Libraries/GUI/README.md)
+- [Windows Forms](Libraries/GUI/WinForms/README.md)
 - [Windows Presentation Foundation](Libraries/GUI/WPF/README.md)
   - [Dependency Properties](Libraries/GUI/WPF/Dependency%20Properties.md)
   - [Data Binding](Libraries/GUI/WPF/Data%20Binding.md)
@@ -70,9 +71,7 @@
   - [Styles](Libraries/GUI/WPF/Styles.md)
   - Controls
     - [TreeView](Libraries/GUI/WPF/Controls/TreeView.md)
-
-## Information sources
-<details><summary>Blogs</summary>
-
-- [Yazan Diranieh Home Page](http://www.diranieh.com/)
-</details>
+- [Uno](Libraries/GUI/Uno/README.md)
+- [Avalonia UI](Libraries/GUI/Avalonia/README.md)
+  - [Data Binding](Libraries/GUI/Avalonia/Data%20Binding.md)
+  - [Controls](Libraries/GUI/Avalonia/Controls/README.md)
