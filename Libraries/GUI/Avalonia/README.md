@@ -30,7 +30,7 @@ Frameworks:
 [Developing for Mobile](https://docs.avaloniaui.net/tutorials/developing-for-mobile)
 
 ### Android
-[c# - Project not selected to build for this solution configuration - Stack Overflow](https://stackoverflow.com/questions/37675012/project-not-selected-to-build-for-this-solution-configuration)
+[Avalonia UI on running on Android without any dependencies on NET-Android or Xamarin! : dotnet](https://www.reddit.com/r/dotnet/comments/13kar6n/avalonia_ui_on_running_on_android_without_any/)
 
 ### Web
 [Running in the Browser](https://docs.avaloniaui.net/tutorials/running-in-the-browser)

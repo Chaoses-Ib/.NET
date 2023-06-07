@@ -9,6 +9,8 @@
 - Interoperability
   - [Platform Invoke](CLI/Interoperability/Platform%20Invoke.md)
   - [Type Marshalling](CLI/Interoperability/Type%20Marshalling.md)
+- [Platforms](CLI/Platforms/README.md)
+  - [Android](CLI/Platforms/Android.md)
 - [Security](CLI/Security.md)
 - [Compatibility](CLI/Compatibility.md)
 - [.NET Framework](CLI/.NET%20Framework.md)
