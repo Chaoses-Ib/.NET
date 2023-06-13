@@ -73,7 +73,11 @@
   - [Styles](Libraries/GUI/WPF/Styles.md)
   - Controls
     - [TreeView](Libraries/GUI/WPF/Controls/TreeView.md)
+- [Multi-platform App UI](Libraries/GUI/MAUI/README.md)
 - [Uno](Libraries/GUI/Uno/README.md)
 - [Avalonia UI](Libraries/GUI/Avalonia/README.md)
   - [Data Binding](Libraries/GUI/Avalonia/Data%20Binding.md)
   - [Controls](Libraries/GUI/Avalonia/Controls/README.md)
+    - [GroupBox](Libraries/GUI/Avalonia/Controls/GroupBox.md)
+    - [WebView](Libraries/GUI/Avalonia/Controls/WebView.md)
+- [→Visualization](https://github.com/Chaoses-Ib/VisualComputing/blob/main/Visualization/README.md#net)

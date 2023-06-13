@@ -8,3 +8,6 @@
 - [Cocona](https://github.com/mayuki/Cocona)
 - [CliFx](https://github.com/Tyrrrz/CliFx)
 - [CommandDotNet](https://github.com/bilal-fazlani/commanddotnet)
+
+## Interoperability
+- [CliWrap: Library for running command-line processes](https://github.com/Tyrrrz/CliWrap)

@@ -7,6 +7,8 @@
 
 [Binding a Java Library](https://learn.microsoft.com/en-us/xamarin/android/platform/binding-java-library/)
 
+[MauiAppJnilibSample: MAUI application sample using services from a java library.](https://github.com/arvindd/MauiAppJnilibSample)
+
 ## Build
 Debug 默认会启用 [Fast Deployment](https://learn.microsoft.com/en-us/xamarin/android/deploy-test/building-apps/build-process#fast-deployment)，此时生成的 APK 不能独立部署，也只支持某一 ABI。
 
@@ -24,3 +26,8 @@ ABI:
 
 Visual Studio:
 - [c# - Project not selected to build for this solution configuration - Stack Overflow](https://stackoverflow.com/questions/37675012/project-not-selected-to-build-for-this-solution-configuration)
+
+## Debugging
+[Develop Android apps with Avalonia UI and run them on WSA](https://curia.me/develop-android-applications-with/)
+
+如果 debug 时与设备连接缓慢，或是无法运行 app，可以尝试 kill 所有 adb 进程。

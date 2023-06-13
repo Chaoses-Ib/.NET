@@ -17,6 +17,8 @@
 
 [Showcase](https://avaloniaui.net/Showcase)
 
+[Breaking Changes · AvaloniaUI/Avalonia Wiki](https://github.com/AvaloniaUI/Avalonia/wiki/Breaking-Changes)
+
 ## [Model-view-viewmodel](https://docs.avaloniaui.net/guides/basics/mvvm)
 [Getting Started](https://docs.avaloniaui.net/docs/getting-started/programming-with-avalonia/the-model-view-viewmodel-pattern-mvvm)
 
@@ -36,3 +38,14 @@ Frameworks:
 [Running in the Browser](https://docs.avaloniaui.net/tutorials/running-in-the-browser)
 
 [Avalonia UI Playground: Code.Xaml.Live](https://play.avaloniaui.net/)
+
+[Avalonia UI framework for .NET now runs everywhere using webassembly target : dotnet](https://www.reddit.com/r/dotnet/comments/r4sez4/avalonia_ui_framework_for_net_now_runs_everywhere/)
+
+### Others
+- [Unilonia: Unity plugin which allows running Avalonia on Unity](https://github.com/TheKeyblader/Unilonia)
+- [Samples/AvaloniaSample at main · Urho-Net/Samples · GitHub](https://github.com/Urho-Net/Samples/tree/main/AvaloniaSample)
+- [Stridelonia: Stride plugin which allows running Avalonia on Stride](https://github.com/TheKeyblader/Stridelonia)
+- [Consolonia UI: A cross-platform UI framework for .NET.](https://github.com/jinek/Consolonia)
+
+## Build
+[Trim down the size of the compiled binary · AvaloniaUI/Avalonia · Discussion #9217](https://github.com/AvaloniaUI/Avalonia/discussions/9217)
