@@ -11,6 +11,7 @@
   - [Type Marshalling](CLI/Interoperability/Type%20Marshalling.md)
 - [Platforms](CLI/Platforms/README.md)
   - [Android](CLI/Platforms/Android.md)
+- [Performance](CLI/Performance/README.md)
 - [Security](CLI/Security.md)
 - [Compatibility](CLI/Compatibility.md)
 - [.NET Framework](CLI/.NET%20Framework.md)
