@@ -27,6 +27,7 @@
   - [Methods](Languages/C%23/Methods.md)
   - [Iterators](Languages/C%23/Iterators.md)
   - [Asynchronous Programming](Languages/C%23/Asynchronous%20Programming.md)
+  - [Coding Conventions](Languages/C%23/Coding%20Conventions.md)
 - F#
 - VB.NET
 - [C++/CLI](Languages/C++CLI/README.md)
