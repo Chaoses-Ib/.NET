@@ -26,5 +26,8 @@
 - [MAUI vs Avalonia : csharp](https://www.reddit.com/r/csharp/comments/zzmwux/maui_vs_avalonia/)
 - [Uno vs. Avalonia : csharp](https://www.reddit.com/r/csharp/comments/y01ikg/uno_vs_avalonia/)
 
+## Control libraries
+- [Syncfusion: .NET, Xamarin, JavaScript, Angular UI components](https://www.syncfusion.com/)
+
 
 [^drawn-reddit]: [Why prefer drawn controls over mapping to native? : FlutterDev](https://www.reddit.com/r/FlutterDev/comments/v6g276/why_prefer_drawn_controls_over_mapping_to_native/)

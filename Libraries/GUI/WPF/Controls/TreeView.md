@@ -14,6 +14,8 @@
 </TreeView>
 ```
 
+[TreeViewEx: Extremly helpful classes to handle the WPF TreeView](https://github.com/Anapher/TreeViewEx)
+
 ## Data binding
 [^prowpf]
 

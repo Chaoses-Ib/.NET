@@ -2,8 +2,12 @@
 [GitHub](https://github.com/dotnet/wpf)
 
 ## Information sources
-<details><summary>Books</summary>
-
+Books:
 - Pro WPF 4.5 in C#
 - 深入浅出 WPF
-</details>
+
+Blogs:
+- [Bea's WPF blog](https://github.com/bstollnitz/old-wpf-blog)
+
+## Tools
+- [Snoop: The WPF Spy Utility](https://github.com/snoopwpf/snoopwpf)

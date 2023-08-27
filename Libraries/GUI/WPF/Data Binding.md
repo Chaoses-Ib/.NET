@@ -31,10 +31,43 @@ OneTime | The target property is set initially based on the source property valu
 OneWayToSource | Similar to OneWay but in reverse. The source property is updated when the target property changes (which might seem a little backward), but the target property is never updated.
 Default | The type of binding depends on the target property. It's either TwoWay (for user-settable properties, such as the `TextBox.Text`) or OneWay (for everything else). All bindings use this approach unless you specify otherwise.
 
+- [Binding.UpdateSourceTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.binding.updatesourcetrigger?view=netframework-4.8)
+
+  Bindings that are [TwoWay](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.bindingmode?view=netframework-4.8#system-windows-data-bindingmode-twoway) or [OneWayToSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.bindingmode?view=netframework-4.8#system-windows-data-bindingmode-onewaytosource) listen for changes in the target property and propagate them back to the source. This is known as updating the source. Usually, these updates happen whenever the target property changes. This is fine for check boxes and other simple controls, but it is usually not appropriate for text fields. Updating after every keystroke can diminish performance and it denies the user the usual opportunity to backspace and fix typing errors before committing to the new value. Therefore, the default [UpdateSourceTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.binding.updatesourcetrigger?view=netframework-4.8) value of the [Text](https://learn.microsoft.com/en-us/dotnet/api/system.windows.controls.textbox.text?view=netframework-4.8) property is [LostFocus](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.updatesourcetrigger?view=netframework-4.8#system-windows-data-updatesourcetrigger-lostfocus) and not [PropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.updatesourcetrigger?view=netframework-4.8#system-windows-data-updatesourcetrigger-propertychanged).
+
+  If you set the [UpdateSourceTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.binding.updatesourcetrigger?view=netframework-4.8) value to [Explicit](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.updatesourcetrigger?view=netframework-4.8#system-windows-data-updatesourcetrigger-explicit), you must call the [UpdateSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.bindingexpression.updatesource?view=netframework-4.8) method or the changes will not propagate back to the source.
+
 ## Binding errors
 WPF 会无视异常：
 - Path 不存在时 WPF 不会抛出异常，不过调试时会在 Output 中输出。
 - WPF 会忽略读取属性时抛出的异常，转换失败的异常也会被忽略。
 - 不过可以设置读取失败时的显示内容。
+
+[Debugging data bindings - The complete WPF tutorial](https://wpf-tutorial.com/data-binding/debugging/)
+
+```xaml
+<Window x:Class="WpfTutorialSamples.DataBinding.DataBindingDebuggingSample"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+        Title="DataBindingDebuggingSample" Height="100" Width="200">
+    <Grid Margin="10">
+		<TextBlock Text="{Binding Title, diag:PresentationTraceSources.TraceLevel=High}" />
+	</Grid>
+</Window>
+```
+
+- 在需要 `TwoWay` 的 property 上使用 `OneWay` 可能会导致 binding 异常失效
+
+  ```csharp
+  System.Windows.Data Warning: 75 : BindingExpression (hash=52697953): Deactivate
+  System.Windows.Data Warning: 99 : BindingExpression (hash=52697953): Replace item at level 0 with {NullDataItem}
+  System.Windows.Data Warning: 59 : BindingExpression (hash=52697953): Detach
+  ```
+
+  使用 `Mode=TwoWay, UpdateSourceTrigger=Explicit` 可以解决。
+
+  [wpf - Why does data binding break in OneWay mode? - Stack Overflow](https://stackoverflow.com/questions/1389038/why-does-data-binding-break-in-oneway-mode)
+
 
 [^prowpf]: Pro WPF 4.5 in C#
