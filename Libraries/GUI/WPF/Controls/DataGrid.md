@@ -38,5 +38,11 @@ The DataGrid features built-in sorting as long as you’re binding a collection 
 
 - [wpf - How to add back the sort arrow after applying background of Column headers - Stack Overflow](https://stackoverflow.com/questions/4487786/how-to-add-back-the-sort-arrow-after-applying-background-of-column-headers)
 
+## Selection
+- [DataGrid.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols.datagrid.selectedindex?view=netframework-4.8)
+
+## Input
+[Keyboard navigation and selection concepts in the DataGrid control - Windows Community Toolkit | Microsoft Learn](https://learn.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid_guidance/keyboard_navigation_selection)
+
 
 [^prowpf]: Pro WPF 4.5 in C#

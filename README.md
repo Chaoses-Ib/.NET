@@ -76,6 +76,7 @@
   - [Data Templates](Libraries/GUI/WPF/Data%20Templates.md)
   - [Control Templates](Libraries/GUI/WPF/Control%20Templates.md)
   - [Styles](Libraries/GUI/WPF/Styles.md)
+  - [Input](Libraries/GUI/WPF/Input/README.md)
   - [Controls](Libraries/GUI/WPF/Controls/README.md)
     - [DataGrid](Libraries/GUI/WPF/Controls/DataGrid.md)
     - [StatusBar](Libraries/GUI/WPF/Controls/StatusBar.md)
