@@ -39,6 +39,7 @@
   - [Functions](Languages/PowerShell/Functions.md)
   - [Modules](Languages/PowerShell/Modules.md)
   - [Security](Languages/PowerShell/Security.md)
+- [Rust](Languages/Rust/README.md)
 
 ## Build
 - [Project SDKs](Build/Project%20SDKs.md)

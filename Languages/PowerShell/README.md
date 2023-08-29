@@ -34,11 +34,10 @@ Update-Help -UICulture en-US -Verbose -Force -ErrorAction SilentlyContinue
 [update-help fails for 'ConfigDefenderPerformance, PSReadline' -UICulture en-US. · Issue #17067 · PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/17067)
 
 ## Information sources
-<details><summary>Blogs</summary>
+Blogs:
+- [PowerShell Team - Automating the world one-liner at a time…](https://devblogs.microsoft.com/powershell/)
+- [PowerShell Community](https://devblogs.microsoft.com/powershell-community/)  
+- [Scripting Blog - A place to learn about PowerShell and share stories of automation](https://devblogs.microsoft.com/scripting/)
 
-﻿  - [PowerShell Team - Automating the world one-liner at a time…](https://devblogs.microsoft.com/powershell/)
-  - [PowerShell Community](https://devblogs.microsoft.com/powershell-community/)  
-  - [Scripting Blog - A place to learn about PowerShell and share stories of automation](https://devblogs.microsoft.com/scripting/)
-</details>
 
 [^update-help-so]: [Powershell fails with Update - Stack Overflow](https://stackoverflow.com/questions/39834452/powershell-fails-with-update)
