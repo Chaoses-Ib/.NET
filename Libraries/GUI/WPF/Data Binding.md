@@ -69,5 +69,45 @@ WPF 会无视异常：
 
   [wpf - Why does data binding break in OneWay mode? - Stack Overflow](https://stackoverflow.com/questions/1389038/why-does-data-binding-break-in-oneway-mode)
 
+## [StringFormat](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.bindingbase.stringformat?view=netframework-4.8)
+Binding:
+- Do the formatting in the view model[^stringformat-1]
+
+- `MultiBinding` with a custom converter[^stringformat-2]
+
+  ```csharp
+  public class FormatStringConverter : IMultiValueConverter
+  {
+      public object Convert(object[] values, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+      {
+          if (values[0] == DependencyProperty.UnsetValue || values[0] == null)
+              return String.Empty;
+
+          var format = (string)values[0];
+          var args = values.Where((o, i) => { return i != 0; }).ToArray();
+
+          return String.Format(format, args);
+      }
+
+      public object[] ConvertBack(object value, Type[] targetTypes, object parameter, System.Globalization.CultureInfo culture)
+      {
+          throw new NotImplementedException();
+      }
+  }
+  ```
+
+  ```xaml
+  <TextBlock ap:Localization.Resource="SomeKey">
+      <TextBlock.Text>
+          <MultiBinding Converter="{StaticResource formatStringConverter}">
+              <Binding Path="(ap:Localization.Resource)" RelativeSource="{RelativeSource Self}" />
+              <Binding Path="Id" />
+          </MultiBinding>
+      </TextBlock.Text>
+  </TextBlock>
+  ```
+
 
 [^prowpf]: Pro WPF 4.5 in C#
+[^stringformat-1]: [wpf - Binding StringFormat - Stack Overflow](https://stackoverflow.com/questions/4010772/binding-stringformat)
+[^stringformat-2]: [c# - WPF Localization: DynamicResource with StringFormat? - Stack Overflow](https://stackoverflow.com/questions/30925145/wpf-localization-dynamicresource-with-stringformat)
