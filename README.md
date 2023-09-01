@@ -3,6 +3,9 @@
 - Assemblies
   - [Loading](CLI/Assemblies/Loading.md)
   - [Strong-named Assemblies](CLI/Assemblies/Strong-named%20Assemblies.md)
+- [Memory Management](CLI/Memory/README.md)
+  - [Finalizers](CLI/Memory/Finalizers.md)
+  - [Disposal](CLI/Memory/Disposal.md)
 - [Resources](CLI/Resources.md)
 - [Application Domains](CLI/Application%20Domains.md)
 - [.NET Remoting](CLI/.NET%20Remoting.md)
