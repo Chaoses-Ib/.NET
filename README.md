@@ -61,6 +61,8 @@
   - [Plugin Frameworks](Libraries/IoC/Plugin%20Frameworks/README.md)
     - [Managed Extensibility Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Extensibility%20Framework.md)
     - [Managed Add-in Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Add-in%20Framework.md)
+- IO
+  - [File](Libraries/IO/File/README.md)
 - [Logging](Libraries/Logging.md)
 - Communication
   - [Windows Communication Foundation](Libraries/Communication/WCF/README.md)
