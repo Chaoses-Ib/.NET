@@ -65,6 +65,27 @@ function Test-MrParameter {
 }
 ```
 
+## [Return](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_return)
+In PowerShell, the results of **each statement** are returned as output, even without a statement that contains the Return keyword. Languages like C or C# return only the value or values that are specified by the `return` keyword.
+
+```powershell
+function calculation {
+    param ($value)
+
+    "Please wait. Working on calculation..."
+    $value += 73
+    return $value
+}
+
+$a = calculation 14
+
+PS> $a
+Please wait. Working on calculation...
+87
+```
+
+[`Write-Output`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/write-output) writes the specified objects to the pipeline.
+
 ## Comment-based help
 ```powershell
 function Get-MrAutoStoppedService {

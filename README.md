@@ -40,6 +40,7 @@
   - [Providers](Languages/PowerShell/Providers.md)
   - [Flow Control](Languages/PowerShell/Flow%20Control.md)
   - [Functions](Languages/PowerShell/Functions.md)
+  - [Pipelines](Languages/PowerShell/Pipelines.md)
   - [Modules](Languages/PowerShell/Modules.md)
   - [Security](Languages/PowerShell/Security.md)
 - [Rust](Languages/Rust/README.md)
