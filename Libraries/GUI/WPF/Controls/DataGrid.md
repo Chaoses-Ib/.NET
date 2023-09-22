@@ -41,6 +41,17 @@ The DataGrid features built-in sorting as long as you’re binding a collection 
 ## Selection
 - [DataGrid.SelectedIndex](https://learn.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols.datagrid.selectedindex?view=netframework-4.8)
 
+- [DataGrid.ScrollIntoView](https://learn.microsoft.com/en-us/dotnet/api/system.windows.controls.datagrid.scrollintoview)
+
+  `ScrollIntoView` only accepts item, but not index. It will just do a linear search in the DataGrid most times, but may also call `CollectionView.IndexOf()` sometimes. `ScrollIntoView` actually has an overload that can specify index, but it is an internal method.
+
+## ContextMenu
+- `DataGrid.ContextMenuOpening` will be triggered when right-click on regions out of cells, including on column headers. And it may not change the selection in some case for unknown reason.
+
+  A solution is to handle `ContextMenuOpening` on `DataGridCell`, and select the row manually via `DataGridRow.GetRowContainingElement((DataGridCell)sender).IsSelected`.
+
+- `RowDoubleClick` 也会响应左键外的其它鼠标按键，可能会与 `ContextMenu` 冲突。
+
 ## Input
 [Keyboard navigation and selection concepts in the DataGrid control - Windows Community Toolkit | Microsoft Learn](https://learn.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid_guidance/keyboard_navigation_selection)
 

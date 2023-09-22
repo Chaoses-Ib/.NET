@@ -16,6 +16,8 @@
   - [Plugin Framework for .NET Core](https://github.com/weikio/PluginFramework)
   - [Prise](https://github.com/merken/Prise)
 
+[MAF, MEF, or Something Else for Containerized Toolbox? : dotnet](https://www.reddit.com/r/dotnet/comments/16oqdu4/maf_mef_or_something_else_for_containerized/?sort=new)
+
 ## Compatibility
 [c# - Plugin Architecture With Forward & Backward Compatibility - Stack Overflow](https://stackoverflow.com/questions/15443536/plugin-architecture-with-forward-backward-compatibility)
 

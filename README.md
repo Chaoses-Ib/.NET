@@ -75,6 +75,9 @@
 
 ### [GUI](Libraries/GUI/README.md)
 - [Windows Forms](Libraries/GUI/WinForms/README.md)
+  - [Commands](Libraries/GUI/WinForms/Commands.md)
+  - Controls
+    - [Menu](Libraries/GUI/WinForms/Controls/Menu.md)
 - [Windows Presentation Foundation](Libraries/GUI/WPF/README.md)
   - [Dependency Properties](Libraries/GUI/WPF/Dependency%20Properties.md)
   - [Trees](Libraries/GUI/WPF/Trees.md)
@@ -87,6 +90,8 @@
   - [Input](Libraries/GUI/WPF/Input/README.md)
   - [Controls](Libraries/GUI/WPF/Controls/README.md)
     - [DataGrid](Libraries/GUI/WPF/Controls/DataGrid.md)
+    - Menu
+      - [ContextMenu](Libraries/GUI/WPF/Controls/Menu/ContextMenu.md)
     - [StatusBar](Libraries/GUI/WPF/Controls/StatusBar.md)
     - [TreeView](Libraries/GUI/WPF/Controls/TreeView.md)
     - [Window](Libraries/GUI/WPF/Controls/Window.md)

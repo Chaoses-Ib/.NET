@@ -1,6 +1,7 @@
 # Controls
 ## Control libraries
 - [Material Design In XAML Toolkit: Google's Material Design in XAML & WPF, for C# & VB.Net.](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
+- [WPF UI: WPF UI provides the Fluent experience in your known and loved WPF framework. Intuitive design, themes, navigation and new immersive controls. All natively and effortlessly.](https://github.com/lepoco/wpfui)
 - [ControlzEx: Shared Controlz for WPF and ... more](https://github.com/ControlzEx/ControlzEx/tree/develop)
 
 Proprietary:
