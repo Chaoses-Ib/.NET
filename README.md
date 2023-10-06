@@ -56,6 +56,7 @@
 - Collections
   - [IEnumerable](Libraries/Collections/IEnumerable.md)
 - [Memory](Libraries/Memory/README.md)
+  - [Caches](Libraries/Memory/Caches.md)
 - Text
   - [Templating](Libraries/Text/Templating.md)
   - [JSON](Libraries/Text/JSON.md)
