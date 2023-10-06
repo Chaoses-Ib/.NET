@@ -97,6 +97,8 @@
     - [StatusBar](Libraries/GUI/WPF/Controls/StatusBar.md)
     - [TreeView](Libraries/GUI/WPF/Controls/TreeView.md)
     - [Window](Libraries/GUI/WPF/Controls/Window.md)
+- [Universal Windows Platform](Libraries/GUI/UWP/README.md)
+- [Windows UI](Libraries/GUI/WinUI/README.md)
 - [Multi-platform App UI](Libraries/GUI/MAUI/README.md)
 - [Uno](Libraries/GUI/Uno/README.md)
 - [Avalonia UI](Libraries/GUI/Avalonia/README.md)

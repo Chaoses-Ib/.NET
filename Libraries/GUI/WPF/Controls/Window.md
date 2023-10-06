@@ -26,3 +26,19 @@
 13. [Closing](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.closing#system-windows-window-closing)
 14. [Deactivated](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.deactivated#system-windows-window-deactivated)
 15. [Closed](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.closed#system-windows-window-closed)
+
+## WindowChrome
+- [ControlzEx.WindowChromeBehavior](https://github.com/ControlzEx/ControlzEx#windowchromebehavior)
+  - Draw anywhere inside the window (including the titlebar)
+  - Supports every `WindowStyle` (`None`, `SingleBorderWindow`, `ThreeDBorderWindow` and `ToolWindow`)
+  - Supports jitter free window resizes
+  - Allows you to ignore the taskbar when the window is maximized
+  - Provides an `IsNCActive` property
+  - Mitigates a bug in Windows that causes newly shown windows to briefly be shown with a pure white background
+  - Starting with Windows 11:
+    - Allows you to control rounded corners (through `CornerPreference`)
+    - Supports snap menu on window buttons (through attached properties like `NonClientControlProperties.HitTestResult` and `NonClientControlProperties.ClickStrategy`)
+
+  Notes:
+  - Changing the icon or title of a window will cause it to redraw the entire window. ([WindowChromeBehavior.MessageHandling.cs](https://github.com/ControlzEx/ControlzEx/blob/8ea2b94753b39b07310edc847fb825929bf25b81/src/ControlzEx/Behaviors/WindowChrome/WindowChromeBehavior.MessageHandling.cs#L212-L220), [SuppressRedrawScope.cs](https://github.com/ControlzEx/ControlzEx/blob/8ea2b94753b39b07310edc847fb825929bf25b81/src/ControlzEx/Behaviors/WindowChrome/WindowChromeBehavior.SuppressRedrawScope.cs#L37))
+    - If `AllowsTransparency="True"`, this will cause the window to randomly flicker.
