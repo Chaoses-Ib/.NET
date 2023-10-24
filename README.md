@@ -66,6 +66,7 @@
 - [Serialization](Libraries/Serialization/README.md)
   - [Binary Serialization](Libraries/Serialization/Binary%20Serialization.md)
 - [Inversion of Control](Libraries/IoC/README.md)
+  - [Autofac](Libraries/IoC/Autofac.md)
   - [Plugin Frameworks](Libraries/IoC/Plugin%20Frameworks/README.md)
     - [Managed Extensibility Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Extensibility%20Framework.md)
     - [Managed Add-in Framework](Libraries/IoC/Plugin%20Frameworks/Managed%20Add-in%20Framework.md)
