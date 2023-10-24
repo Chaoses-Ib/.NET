@@ -27,6 +27,11 @@
 14. [Deactivated](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.deactivated#system-windows-window-deactivated)
 15. [Closed](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.closed#system-windows-window-closed)
 
+- `Application.Current.Windows`
+  - Backed by an `ArrayList`.
+  - [c# - How do I know if a WPF window is opened - Stack Overflow](https://stackoverflow.com/questions/16202101/how-do-i-know-if-a-wpf-window-is-opened)
+  - [c# - Refer to active Window in WPF? - Stack Overflow](https://stackoverflow.com/questions/2038879/refer-to-active-window-in-wpf)
+
 ## WindowChrome
 - [ControlzEx.WindowChromeBehavior](https://github.com/ControlzEx/ControlzEx#windowchromebehavior)
   - Draw anywhere inside the window (including the titlebar)

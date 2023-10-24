@@ -106,6 +106,10 @@ or:
           HorizontalContentAlignment="Stretch">
 ```
 
+## Selection
+[wpf - Customizing the TreeView to allow multi select - Stack Overflow](https://stackoverflow.com/questions/459375/customizing-the-treeview-to-allow-multi-select)
+- [MultiSelectTreeView control -- unclassified software development](https://unclassified.software/en/source/multiselecttreeview) ([GitHub](https://github.com/ygoe/MultiSelectTreeView))
+
 ## Context menu
 在 TreeView 中，右键单击项目不会导致相应项目被选中，这意味着如果为不同的项目设置了不同的 ContextMenu，那么 TreeView.SelectedItem 获取到的将会是错误的项目。这个问题可以通过两种方法解决：
 
