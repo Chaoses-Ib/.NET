@@ -13,6 +13,10 @@ Library | Named placeholders | Lists | Conditions | i18n | Code
 Numeric formats:
 - `N0`
 
+[c# - Parse string using format template? - Stack Overflow](https://stackoverflow.com/questions/5346158/parse-string-using-format-template)
+
+[c# - Function to parse .NET composite string format - Code Review Stack Exchange](https://codereview.stackexchange.com/questions/215417/function-to-parse-net-composite-string-format)
+
 Tools:
 - [PowerShell](../../Languages/PowerShell/Strings.md#formatting)
 - [Online .NET Format Tester - MOBZystems](https://www.mobzystems.com/online/format-tester/)

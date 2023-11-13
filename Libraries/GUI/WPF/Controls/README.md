@@ -1,6 +1,13 @@
 # Controls
 [Controls - WPF .NET Framework | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/controls/?view=netframeworkdesktop-4.8)
 
+[wpf - Custom vs User control - Stack Overflow](https://stackoverflow.com/questions/11247708/custom-vs-user-control)
+
+[wpf - What's the difference betwen a UserControl and a ContentControl? - Stack Overflow](https://stackoverflow.com/questions/18781679/whats-the-difference-betwen-a-usercontrol-and-a-contentcontrol)
+
+[c# - How to create a WPF UserControl with NAMED content - Stack Overflow](https://stackoverflow.com/questions/751325/how-to-create-a-wpf-usercontrol-with-named-content)
+- [blog.bluecog.co.nz/archives/2007/08/27/wpf-cannot-set-name-attribute/](http://blog.bluecog.co.nz/archives/2007/08/27/wpf-cannot-set-name-attribute/)
+
 ## Control libraries
 - [Material Design In XAML Toolkit: Google's Material Design in XAML & WPF, for C# & VB.Net.](https://github.com/MaterialDesignInXAML/MaterialDesignInXamlToolkit)
 - [WPF UI: WPF UI provides the Fluent experience in your known and loved WPF framework. Intuitive design, themes, navigation and new immersive controls. All natively and effortlessly.](https://github.com/lepoco/wpfui)

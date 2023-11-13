@@ -16,3 +16,17 @@
       [wpf - Rectangle CornerRadius - Stack Overflow](https://stackoverflow.com/questions/27274535/rectangle-cornerradius)
 
   [c# - Partial border around Textbox - Stack Overflow](https://stackoverflow.com/questions/32157348/partial-border-around-textbox)
+
+- Clipping
+
+  ```xaml
+  <Grid>
+      <Grid.OpacityMask>
+          <VisualBrush Visual="{Binding ElementName=Border1}" />
+      </Grid.OpacityMask>
+      <Border x:Name="Border1" CornerRadius="30" Background="Green" />
+      <TextBlock Text="asdas das d asd a sd a sda" />
+  </Grid>
+  ```
+
+  [wpf - How to make the contents of a round-cornered border be also round-cornered? - Stack Overflow](https://stackoverflow.com/questions/324641/how-to-make-the-contents-of-a-round-cornered-border-be-also-round-cornered)

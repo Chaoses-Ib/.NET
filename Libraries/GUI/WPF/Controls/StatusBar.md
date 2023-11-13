@@ -37,3 +37,5 @@
     </DockPanel>
 </Window>
 ```
+
+`StatusBarItem` has a default padding of `3`.

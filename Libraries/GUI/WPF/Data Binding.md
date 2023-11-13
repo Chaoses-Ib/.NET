@@ -20,6 +20,9 @@ class Student : INotifyPropertyChanged
 textBoxName.SetBinding(TextBox.TextProperty, new Binding("Name") { Source = stu = new Student() });
 ```
 
+- [CalcBinding: Advanced WPF Binding which supports expressions in Path property and other features](https://github.com/Alex141/CalcBinding)
+  - Logical operators cannot be used between `bool` and `Visibility`.
+
 ## Binding modes
 [^prowpf]
 
