@@ -7,13 +7,16 @@
    When `Show` is called, a window does initialization work before it's shown to establish infrastructure that allows it to receive user input. When the window is initialized, the [SourceInitialized](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.sourceinitialized#system-windows-window-sourceinitialized) event is raised and the window is shown.
 2. [FrameworkElement.Initialized](https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.initialized)
 3. [SourceInitialized](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.sourceinitialized#system-windows-window-sourceinitialized)
+
+   [c# - Difference between OnInitialized and OnSourceInitialized in WPF - Stack Overflow](https://stackoverflow.com/questions/54646062/difference-between-oninitialized-and-onsourceinitialized-in-wpf)
 4. [ShowActivated](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.showactivated) (`true` by default)
    1. [Activated](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.activated#system-windows-window-activated)
 5. [FrameworkElement.Loaded](https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.loaded)
 
    > Whether you choose to handle `Loaded` or `Initialized` depends on your requirements. If you do not need to read element properties, intend to reset properties, and do not need any layout information, `Initialized` might be the better event to act upon. If you need all properties of the element to be available, and you will be setting properties that are likely to reset the layout, `Loaded` might be the better event to act upon. Be careful of reentrancy if your handler resets any properties that are interpreted by the layout system to mean that a new layout pass is required.
 
-   在 Window loaded 前操作 element properties 并不会触发异常。
+   - 在 Window loaded 前操作 element properties 并不会触发异常。
+   - `WindowStartupLocation` 在 `Loaded` 之前就生效了。 
 6. [ContentRendered](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.contentrendered)
 
    If the window has no content, this event is not raised.
