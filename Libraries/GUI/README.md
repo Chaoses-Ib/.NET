@@ -9,7 +9,7 @@
     - Multi-platform App UI (MAUI)
   - Uno
   - Avalonia
-- [Eto.Forms: Cross platform GUI framework for desktop and mobile applications in .NET](https://github.com/picoe/Eto)
+- [Eto.Forms](Eto/README.md)
 - Unity
 
 ## Comparison

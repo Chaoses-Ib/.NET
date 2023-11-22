@@ -135,4 +135,5 @@
     - [DataGrid](Libraries/GUI/Avalonia/Controls/DataGrid.md)
     - [GroupBox](Libraries/GUI/Avalonia/Controls/GroupBox.md)
     - [WebView](Libraries/GUI/Avalonia/Controls/WebView.md)
+- [Eto.Forms](Libraries/GUI/Eto/README.md)
 - [→Visualization](https://github.com/Chaoses-Ib/VisualComputing/blob/main/Visualization/README.md#net)
