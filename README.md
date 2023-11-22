@@ -24,6 +24,7 @@
   - [Stack](Languages/C%23/Stack.md)
   - [Garbage Collection](Languages/C%23/Garbage%20Collection.md)
   - [Types](Languages/C%23/Types/README.md)
+    - [Enums](Languages/C%23/Types/Enums.md)
     - [Pointers](Languages/C%23/Types/Pointers.md)
     - [Arrays](Languages/C%23/Types/Arrays.md)
     - [Tuple Types](Languages/C%23/Types/Tuples.md)
