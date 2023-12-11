@@ -55,5 +55,7 @@ The DataGrid features built-in sorting as long as you’re binding a collection 
 ## Input
 [Keyboard navigation and selection concepts in the DataGrid control - Windows Community Toolkit | Microsoft Learn](https://learn.microsoft.com/en-us/windows/communitytoolkit/controls/datagrid_guidance/keyboard_navigation_selection)
 
+[Editing](https://learn.microsoft.com/en-us/dotnet/api/system.windows.controls.datagrid?view=windowsdesktop-8.0#editing)
+
 
 [^prowpf]: Pro WPF 4.5 in C#

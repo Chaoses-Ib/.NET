@@ -99,6 +99,7 @@
   - [Visual States](Libraries/GUI/WPF/Visual%20States.md)
   - [Behaviors](Libraries/GUI/WPF/Behaviors.md)
   - [Input](Libraries/GUI/WPF/Input/README.md)
+  - [Events](Libraries/GUI/WPF/Events.md)
   - [Commands](Libraries/GUI/WPF/Commands.md)
   - [Layouts](Libraries/GUI/WPF/Layouts/README.md)
     - [StackPanel](Libraries/GUI/WPF/Layouts/StackPanel.md)
