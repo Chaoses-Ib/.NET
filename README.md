@@ -101,6 +101,7 @@
   - [Input](Libraries/GUI/WPF/Input/README.md)
   - [Commands](Libraries/GUI/WPF/Commands.md)
   - [Layouts](Libraries/GUI/WPF/Layouts/README.md)
+    - [StackPanel](Libraries/GUI/WPF/Layouts/StackPanel.md)
     - [DockPanel](Libraries/GUI/WPF/Layouts/DockPanel.md)
   - [Controls](Libraries/GUI/WPF/Controls/README.md)
     - [Border](Libraries/GUI/WPF/Controls/Border.md)
