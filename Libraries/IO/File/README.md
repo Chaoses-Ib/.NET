@@ -1,4 +1,6 @@
 # File
+- [.NET-Standard-Atomic-File-Operations: .NET Standard atomic file operations.](https://github.com/Acmion/.NET-Standard-Atomic-File-Operations)
+
 ## Replacement
 [File.Replace](https://learn.microsoft.com/en-us/dotnet/api/system.io.file.replace)
 - If the `sourceFileName` and `destinationFileName` are on different volumes, this method will raise an exception. If the `destinationBackupFileName` is on a different volume from the source file, the backup file will be deleted.
