@@ -48,6 +48,8 @@ If the caller (`ExecuteAsyncMethods`) is not `async`, there will be no warnings.
 ## Do not await null
 Await null will throw a NullReferenceException. Await `Task.FromResult()` or `Task.CompletedTask` instead.
 
+Always using `async` can prevent a method from carelessly returning `null`.
+
 See also:
 - [Proposal: await? (Null-aware await) · Issue #7171 · dotnet/roslyn](https://github.com/dotnet/roslyn/issues/7171)
 - [Champion "Null-conditional await" · Issue #35 · dotnet/csharplang](https://github.com/dotnet/csharplang/issues/35)
