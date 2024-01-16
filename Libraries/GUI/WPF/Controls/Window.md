@@ -17,6 +17,7 @@
 
    - 在 Window loaded 前操作 element properties 并不会触发异常。
    - `WindowStartupLocation` 在 `Loaded` 之前就生效了。 
+   - [c# - Window Loaded and WPF - Stack Overflow](https://stackoverflow.com/questions/12589772/window-loaded-and-wpf)
 6. [ContentRendered](https://learn.microsoft.com/en-us/dotnet/api/system.windows.window.contentrendered)
 
    If the window has no content, this event is not raised.

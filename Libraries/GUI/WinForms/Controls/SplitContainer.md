@@ -1,0 +1,2 @@
+# SplitContainer
+[SplitContainer Control - Windows Forms .NET Framework | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/splitcontainer-control-windows-forms?view=netframeworkdesktop-4.8)

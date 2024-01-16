@@ -7,3 +7,5 @@
   `Grid`
 
 [Defining WPF Adorners in XAML - CodeProject](https://www.codeproject.com/Articles/54472/Defining-WPF-Adorners-in-XAML)
+
+[WPF Behaviors: adding mouse-event adorners -- Code musings in C#](https://www.thomasb.fr/2015/01/wpf-behaviors-adding-mouse-event-adorners/)

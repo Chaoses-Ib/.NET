@@ -1,4 +1,8 @@
 # Border
+[BorderBrush | 2,000 Things You Should Know About WPF](https://wpf.2000things.com/tag/borderbrush/)
+
+- By default, the `BorderBrush` is `null` and `BorderThickness` is a `Thickness` structure with all of its dimensions set to `0`.
+
 - [xaml - How does Border Thickness Affect the width of the Margin, Padding, or content of the UI Control? - Stack Overflow](https://stackoverflow.com/questions/48602494/how-does-border-thickness-affect-the-width-of-the-margin-padding-or-content-of)
 
 - Thickness overlapping
@@ -14,6 +18,8 @@
       [WPF rectangle - round just top corners - Stack Overflow](https://stackoverflow.com/questions/1697413/wpf-rectangle-round-just-top-corners)
 
       [wpf - Rectangle CornerRadius - Stack Overflow](https://stackoverflow.com/questions/27274535/rectangle-cornerradius)
+
+      [WPF PartiallyRoundedRectangle: Choose Which Corners You Want Rounded - CodeProject](https://www.codeproject.com/Articles/21449/WPF-PartiallyRoundedRectangle-Choose-Which-Corners)
 
   [c# - Partial border around Textbox - Stack Overflow](https://stackoverflow.com/questions/32157348/partial-border-around-textbox)
 

@@ -67,6 +67,8 @@ You can modify the Text property of a command before you bind it in a window (fo
 WPF includes a basic command library that’s stocked with more than 100 commands. These commands are exposed through the static properties of five dedicated static classes:
 
 - [`ApplicationCommands`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.applicationcommands): This class provides the common commands, including clipboard commands (such as `Copy`, `Cut`, and `Paste`) and document commands (such as `New`, `Open`, `Save`, `SaveAs`, `Print`, and so on).
+  - [`NotACommand`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.applicationcommands.notacommand?view=windowsdesktop-8.0)
+  - When routed to a `TextBox`, `Copy` can only be executed if any text is selected by the user.
 
 - [`NavigationCommands`](https://learn.microsoft.com/en-us/dotnet/api/system.windows.input.navigationcommands): This class provides commands used for navigation, including some that are designed for page-based applications (such as `BrowseBack`, `BrowseForward`, and `NextPage`) and others that are suitable for document-based applications (such as `IncreaseZoom` and `Refresh`).
 

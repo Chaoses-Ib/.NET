@@ -30,8 +30,13 @@ Some controls have built-in input bindings. But most ones are not documented. Se
 
 [wpf - InputBindings work only when focused - Stack Overflow](https://stackoverflow.com/questions/23316274/inputbindings-work-only-when-focused)
 
+[c# - How do I get rid of a default input binding? - Stack Overflow](https://stackoverflow.com/questions/23505833/how-do-i-get-rid-of-a-default-input-binding)
+
 ## Hit testing
 [Hit Testing in the Visual Layer - WPF .NET Framework | Microsoft Learn](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/graphics-multimedia/hit-testing-in-the-visual-layer)
 
 [wpf - How to hit detect on a null or transparent background? - Stack Overflow](https://stackoverflow.com/questions/15169358/how-to-hit-detect-on-a-null-or-transparent-background)
 - `HitTesting` would work if the `Background` is `Transparent` if you're actually using it.
+
+[mouseevent - WPF: Ignore mouse clicks on overlay/adorner, but handle MouseEnter event - Stack Overflow](https://stackoverflow.com/questions/3893809/wpf-ignore-mouse-clicks-on-overlay-adorner-but-handle-mouseenter-event)
+- A workaround is to only handle `MouseEnter` in the surrounding background control.
