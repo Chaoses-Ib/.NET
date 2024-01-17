@@ -16,9 +16,24 @@
 - `LoadedBehavior`
   - 默认为 `Play`，即在显示时开始播放，播放一次后停止。
   - `LoadedBehavior` must be set to `Manual` in order to interactively control media with the `Play`, `Pause`, and `Stop` methods.
+
 - [video - WPF Play Movie on Mouse Over - Stack Overflow](https://stackoverflow.com/questions/459171/wpf-play-movie-on-mouse-over)
+
 - [c# - How to check if MediaElement has stopped? - Stack Overflow](https://stackoverflow.com/questions/25330295/how-to-check-if-mediaelement-has-stopped)
   - `MediaEnded`
+
+- `NaturalDuration`
+  - `NaturalDuration` is only available after `MediaOpened`.
+
+    [.net - MediaElement.NaturalDuration throws exception when querying TimeSpan.TotalSeconds - Stack Overflow](https://stackoverflow.com/questions/4068332/mediaelement-naturalduration-throws-exception-when-querying-timespan-totalsecond)
+
+  - `Position = TimeSpan.MaxValue` or `NaturalDuration.TimeSpan` will lead to a black block.
+
+    Only `NaturalDuration.TimeSpan.Subtract(TimeSpan.FromMilliseconds(1))` works.
+
+- How to display the last frame?
+  
+  `NaturalDuration` is not available before `MediaOpened`. `MediaOpened` will only be triggered after `Play()`. But calling `Play()` and changing position `Position` in `MediaOpened` will lead to a flicker. Setting `Position` to a hardcoded value seems to be the only solution.
 
 ## APNG
 - [APNG Player Library: WPF user control designed to display and play APNG/PNG animation.](https://github.com/ImoutoChan/ApngWpfPlayer)
