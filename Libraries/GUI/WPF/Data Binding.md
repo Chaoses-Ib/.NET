@@ -40,6 +40,13 @@ Default | The type of binding depends on the target property. It's either TwoWay
 
   If you set the [UpdateSourceTrigger](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.binding.updatesourcetrigger?view=netframework-4.8) value to [Explicit](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.updatesourcetrigger?view=netframework-4.8#system-windows-data-updatesourcetrigger-explicit), you must call the [UpdateSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.bindingexpression.updatesource?view=netframework-4.8) method or the changes will not propagate back to the source.
 
+## Asynchronous bindings
+[Binding.IsAsync](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.binding.isasync)
+- [WPF Tips: WPF Tip #1 - IsAsync and WPF Bindings](https://www.wpf.tips/2017/03/wpf-tip-1-isasync-and-wpf-bindings.html)
+- [WPF Tips: WPF Tip #2 - Using FallbackValue with Async WPF Bindings](https://www.wpf.tips/2017/03/wpf-tip-2-using-fallbackvalue-with.html)
+
+[Async Data Binding & Data Virtualization - CodeProject](https://www.codeproject.com/Articles/749212/WPF-Async-Data-Binding-Data-Virtualization)
+
 ## Binding errors
 WPF 会无视异常：
 - Path 不存在时 WPF 不会抛出异常，不过调试时会在 Output 中输出。
