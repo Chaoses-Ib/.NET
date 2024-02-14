@@ -12,7 +12,8 @@
   <TextBox x:Name="MyTextBox" Grid.Column="0" />
 </Grid>
 ```
-The `TextBlock` must be placed before the `TextBox`, otherwise the cursor will be `Arrow` instead of `IBeam`.
+- The `TextBlock` must be placed before the `TextBox`, otherwise the cursor will be `Arrow` instead of `IBeam`.
+- If the binding source is a string property instead of a control, the cue banner will not disappear when some input is sent to IME but not submitted, even if the property is bound with `UpdateSourceTrigger=PropertyChanged`.
 
 ## Input
 [WPF TextBox ignores/overrides certain keyboard input combinations - Issue #8249 - dotnet/wpf](https://github.com/dotnet/wpf/issues/8249)
