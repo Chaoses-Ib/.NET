@@ -118,7 +118,7 @@
     - [Label](Libraries/GUI/WPF/Controls/Label.md)
     - [ListBox](Libraries/GUI/WPF/Controls/ListBox/README.md)
     - [MediaElement](Libraries/GUI/WPF/Controls/MediaElement/README.md)
-    - Menu
+    - [Menu](Libraries/GUI/WPF/Controls/Menu/README.md)
       - [ContextMenu](Libraries/GUI/WPF/Controls/Menu/ContextMenu.md)
     - [Popup](Libraries/GUI/WPF/Controls/Popup.md)
     - [ProgressBar](Libraries/GUI/WPF/Controls/ProgressBar.md)
