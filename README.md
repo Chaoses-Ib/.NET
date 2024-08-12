@@ -32,6 +32,7 @@
     - [Interfaces](Languages/C%23/Types/Interfaces.md)
     - [Methods](Languages/C%23/Types/Methods.md)
     - [Iterators](Languages/C%23/Types/Iterators.md)
+  - [Exceptions](Languages/C%23/Exceptions.md)
   - [Concurrency](Languages/C%23/Concurrency/README.md)
     - [Tasks](Languages/C%23/Concurrency/Tasks/README.md)
     - [Async/await](Languages/C%23/Concurrency/Async-await.md)
