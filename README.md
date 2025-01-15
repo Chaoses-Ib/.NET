@@ -54,6 +54,7 @@
 - [Project SDKs](Build/Project%20SDKs.md)
 - [Framework Targeting](Build/Framework%20Targeting.md)
 - [Executable Size](Build/Executable%20Size.md)
+- [NuGet](Build/NuGet/README.md)
 
 ## Libraries
 - Collections
