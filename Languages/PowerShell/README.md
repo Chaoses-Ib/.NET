@@ -33,6 +33,18 @@ Update-Help -UICulture en-US -Verbose -Force -ErrorAction SilentlyContinue
 
 [update-help fails for 'ConfigDefenderPerformance, PSReadline' -UICulture en-US. · Issue #17067 · PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/issues/17067)
 
+## Autocomplete
+- [posh-tabcomplete: Blazing fast tab completion for powershell.](https://github.com/domsleee/posh-tabcomplete)
+
+## Libraries
+Rust:
+- [powershell-script: A Crate for running Windows PowerShell scripts](https://github.com/cfsamson/powershell-script) (inactive)
+
+  > On Windows it defaults to using the PowerShell which ships with Windows, but you can also run scripts using PowerShell Core on Windows by enabling the `core` feature.
+- [powershell](https://docs.rs/powershell/0.2.0/powershell/) (discontinued)
+- [powershell\_rs: A Rust-friendly way to invoke Powershell commands](https://github.com/gurry/powershell_rs) (discontinued)
+- [execRemoteSigned: A Rust program to set the PowerShell execution policy to RemoteSigned, enabling the execution of local unsigned and remote signed scripts on Windows. Requires administrative privileges.](https://github.com/mranv/execRemoteSigned)
+
 ## Information sources
 Blogs:
 - [PowerShell Team - Automating the world one-liner at a time…](https://devblogs.microsoft.com/powershell/)

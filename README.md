@@ -47,6 +47,7 @@
   - [Functions](Languages/PowerShell/Functions.md)
   - [Pipelines](Languages/PowerShell/Pipelines.md)
   - [Modules](Languages/PowerShell/Modules.md)
+  - [Performance](Languages/PowerShell/Performance.md)
   - [Security](Languages/PowerShell/Security.md)
 - [Rust](Languages/Rust/README.md)
 
