@@ -53,6 +53,7 @@
 >> Sort-Object -Property Count -Descending
 ```
 
+[about\_Foreach - PowerShell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_foreach?view=powershell-7.5)
 ```powershell
 > $ComputerName = 'DC01', 'WEB01'
 > foreach ($Computer in $ComputerName) {
